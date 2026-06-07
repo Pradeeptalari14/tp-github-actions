@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tp-github-actions-mock
+  namespace: production
+  labels:
+    app: tp-github-actions-mock
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tp-github-actions-mock
+  template:
+    metadata:
+      labels:
+        app: tp-github-actions-mock
+    spec:
+      containers:
+      - name: web
+        image: alpine:3.18
+        command: ["echo", "Mock Kubernetes deployment"]
+        ports:
+        - containerPort: 80
