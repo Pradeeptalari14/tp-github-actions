@@ -21,7 +21,7 @@ jobs:
     - run: npm ci
     - run: npm run lint
     - run: npm test -- --coverage
-    - uses: codecov/codecov-action@v4
+    - uses: codecov/codecov-action@v7
 
   security:
     name: Security Scan
