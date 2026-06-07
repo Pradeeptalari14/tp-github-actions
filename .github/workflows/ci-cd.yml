@@ -71,7 +71,7 @@ jobs:
     environment: production
     steps:
     - uses: actions/checkout@v4
-    - uses: azure/k8s-deploy@v4
+    - uses: azure/k8s-deploy@v6
       with:
         namespace: production
         manifests: deploy/
